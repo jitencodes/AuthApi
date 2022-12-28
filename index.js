@@ -6,6 +6,7 @@ const userRoute  = require('./Routes/UserRoute');
 const authRoute = require('./Routes/AuthRoute');
 const departmentrRoute = require('./Routes/DepartmentRoute');
 // CONFIG
+const PORT = process.env.PORT || 3030;
 require('dotenv/config');
 
 // CONNECTING DB
@@ -21,7 +22,7 @@ app.use('/users',userRoute);
 app.use('/departments',departmentrRoute);
 
 // STARTING SERVER
-app.listen(2000,()=>console.log('server starts'));
+app.listen(PORT,()=>console.log('server starts'));
 
 // app.use('/',(req,res)=>{
 //     res.send("ok")
